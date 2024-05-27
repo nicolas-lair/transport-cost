@@ -4,17 +4,31 @@ from urllib.error import URLError
 import pandas as pd
 import streamlit as st
 
-from src.streamlit_utils import (
-    define_style,
-    bottle_input,
-    retrieve_postal_code,
-    destination_city_input,
-    input_factor,
-    init_session_state,
-    display_result,
-    cost_callback,
-    TRANSPORTER_LIST,
-)
+try:
+    from streamlit_utils import (
+        define_style,
+        bottle_input,
+        retrieve_postal_code,
+        destination_city_input,
+        input_factor,
+        init_session_state,
+        display_result,
+        cost_callback,
+        TRANSPORTER_LIST,
+    )
+except ModuleNotFoundError:
+    pass
+    # from .streamlit_utils import (
+    #     define_style,
+    #     bottle_input,
+    #     retrieve_postal_code,
+    #     destination_city_input,
+    #     input_factor,
+    #     init_session_state,
+    #     display_result,
+    #     cost_callback,
+    #     TRANSPORTER_LIST,
+    # )
 
 st.title(":champagne: Move My Wine")
 
