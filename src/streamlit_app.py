@@ -1,14 +1,10 @@
-import sys
-from pathlib import Path
 from dataclasses import asdict
 
 from urllib.error import URLError
 import pandas as pd
 import streamlit as st
 
-sys.path.append(Path(__file__).parents[1].as_posix())
-
-from src.streamlit_utils import (  # noqa: E402
+from src.streamlit_utils import (
     define_style,
     bottle_input,
     retrieve_postal_code,
